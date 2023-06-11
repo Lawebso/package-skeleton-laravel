@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Facades;
+namespace VendorName\Laravel\Skeleton\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

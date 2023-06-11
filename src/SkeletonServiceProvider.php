@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace VendorName\Laravel\Skeleton;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
