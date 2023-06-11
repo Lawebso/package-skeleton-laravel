@@ -155,7 +155,7 @@ $authorUsername = ask('Author username', $usernameGuess);
 $vendorName = ask('Vendor name', $authorUsername);
 $vendorSlug = slugify($vendorName);
 $vendorNamespace = str_replace('-', '', ucwords($vendorName));
-$vendorNamespace = ask('Vendor namespace', $vendorNamespace.'\Laravel'); // note: internal change
+$vendorNamespace = ask('Vendor namespace', $vendorNamespace); // note: internal change
 
 $currentDirectory = getcwd();
 $folderName = basename($currentDirectory);
