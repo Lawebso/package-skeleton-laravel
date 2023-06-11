@@ -155,7 +155,7 @@ $authorUsername = ask('Author username', $usernameGuess);
 $vendorName = ask('Vendor name', $authorUsername);
 $vendorSlug = slugify($vendorName);
 $vendorNamespace = str_replace('-', '', ucwords($vendorName));
-$vendorNamespace = ask('Vendor namespace', $vendorNamespace);
+$vendorNamespace = ask('Vendor namespace', $vendorNamespace.'\Laravel'); // note: internal change
 
 $currentDirectory = getcwd();
 $folderName = basename($currentDirectory);
@@ -164,7 +164,7 @@ $packageName = ask('Package name', $folderName);
 $packageSlug = slugify($packageName);
 $packageSlugWithoutPrefix = remove_prefix('laravel-', $packageSlug);
 
-$className = title_case($packageName);
+$className = title_case($packageSlugWithoutPrefix); // note: internal change
 $className = ask('Class name', $className);
 $variableName = lcfirst($className);
 $description = ask('Package description', "This is my package {$packageSlug}");
