@@ -5,9 +5,9 @@ namespace VendorName\Laravel\Facades;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \VendorName\Skeleton\Skeleton
+ * @see \VendorName\Laravel\Skeleton
  */
-class Skeleton extends Facade
+class Skeleton extends Facade: string
 {
     protected static function getFacadeAccessor()
     {
