@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Laravel\Skeleton;
+namespace VendorName\Laravel;
 
 class Skeleton
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Laravel\Skeleton\Commands;
+namespace VendorName\Laravel\Commands;
 
 use Illuminate\Console\Command;
 

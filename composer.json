@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Laravel\\Skeleton\\": "src/",
-            "VendorName\\Laravel\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "VendorName\\Laravel\\": "src/",
+            "VendorName\\Laravel\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Laravel\\Skeleton\\Tests\\": "tests/"
+            "VendorName\\Laravel\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -61,10 +61,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Laravel\\Skeleton\\SkeletonServiceProvider"
+                "VendorName\\Laravel\\SkeletonServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Laravel\\Skeleton\\Facades\\Skeleton"
+                "Skeleton": "VendorName\\Laravel\\Facades\\Skeleton"
             }
         }
     },

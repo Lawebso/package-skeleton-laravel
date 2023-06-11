@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Laravel\Skeleton\Facades;
+namespace VendorName\Laravel\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -11,6 +11,6 @@ class Skeleton extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return \VendorName\Skeleton\Skeleton::class;
+        return \VendorName\Laravel\Skeleton::class;
     }
 }
