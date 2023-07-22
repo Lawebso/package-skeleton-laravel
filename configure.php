@@ -82,6 +82,15 @@ function remove_prefix(string $prefix, string $content): string
     return $content;
 }
 
+function remove_suffix(string $suffix, string $content): string
+{
+    if (str_ends_with($content, $suffix)) {
+        return str_replace($suffix,'',$content);
+    }
+
+    return $content;
+}
+
 function remove_composer_deps(array $names)
 {
     $data = json_decode(file_get_contents(__DIR__.'/composer.json'), true);
@@ -162,7 +171,7 @@ $folderName = basename($currentDirectory);
 
 $packageName = ask('Package name', $folderName);
 $packageSlug = slugify($packageName);
-$packageSlugWithoutPrefix = remove_prefix('laravel-', $packageSlug);
+$packageSlugWithoutPrefix = remove_suffix('-for-laravel',remove_prefix('laravel-', $packageSlug));
 
 $className = title_case($packageSlugWithoutPrefix); // note: internal change
 $className = ask('Class name', $className);
