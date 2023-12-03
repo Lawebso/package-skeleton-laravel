@@ -262,7 +262,7 @@ $folderName = basename($currentDirectory);
 
 $packageName = ask('Package name', $folderName);
 $packageSlug = slugify($packageName);
-$packageSlugWithoutPrefix = str_replace(['pkg-','for-laravel'], '', $packageSlug);
+$packageSlugWithoutPrefix = str_replace(['pkg-', 'for-laravel'], '', $packageSlug);
 
 $className = title_case($packageName);
 $className = ask('Class name', $className);
