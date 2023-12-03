@@ -85,7 +85,7 @@ function remove_prefix(string $prefix, string $content): string
 function remove_suffix(string $suffix, string $content): string
 {
     if (str_ends_with($content, $suffix)) {
-        return str_replace($suffix,'',$content);
+        return str_replace($suffix, '', $content);
     }
 
     return $content;
@@ -271,7 +271,7 @@ $folderName = basename($currentDirectory);
 
 $packageName = ask('Package name', $folderName);
 $packageSlug = slugify($packageName);
-$packageSlugWithoutPrefix = remove_suffix('-for-laravel',remove_prefix('pkg-laravel-', $packageSlug));
+$packageSlugWithoutPrefix = remove_suffix('-for-laravel', remove_prefix('pkg-laravel-', $packageSlug));
 
 $className = title_case($packageSlugWithoutPrefix); // note: internal change
 $className = ask('Class name', $className);
