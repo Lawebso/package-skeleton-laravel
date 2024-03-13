@@ -174,7 +174,7 @@ function searchCommitsForGitHubUsername(): string
     $authorName = strtolower(trim(shell_exec('git config user.name')));
 
     $committersRaw = shell_exec("git log --author='@users.noreply.github.com' --pretty='%an:%ae' --reverse");
-    $committersLines = explode("\n", $committersRaw);
+    $committersLines = explode("\n", $committersRaw ?? '');
     $committers = array_filter(array_map(function ($line) use ($authorName) {
         $line = trim($line);
         [$name, $email] = explode(':', $line) + [null, null];
@@ -342,7 +342,7 @@ if (! $usePhpStan) {
         'phpstan/extension-installer',
         'phpstan/phpstan-deprecation-rules',
         'phpstan/phpstan-phpunit',
-        'nunomaduro/larastan',
+        'larastan/larastan',
     ]);
 
     remove_composer_script('phpstan');
