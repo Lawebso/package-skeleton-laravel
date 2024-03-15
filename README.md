@@ -16,20 +16,33 @@ This repo can be used to scaffold a Laravel package. Follow these steps to get s
 <!--/delete-->
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/:package_name.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/:package_name)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
-
 ## Installation
 
 You can install the package via composer:
 
 ```bash
 composer require :vendor_slug/:package_slug
+```
+
+essential repositories paths for the composer file:
+
+```bash
+"local": {
+    "type": "path",
+    "url": "../*"
+},
+"essential_packages": {
+    "type": "path",
+    "url": "../../../../Essentials/Laravel/Packages/*"
+},
+"app_packages": {
+    "type": "path",
+    "url": "../../Essentials/Laravel/Packages/*"
+},
+"lawebso/pkg-core-for-laravel": {
+    "type": "vcs",
+    "url": "https://github.com/Lawebso/pkg-core-for-laravel"
+}
 ```
 
 You can publish and run the migrations with:
