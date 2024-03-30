@@ -9,7 +9,7 @@ updates:
     schedule:
       interval: "weekly"
     labels:
-      - "dependencies"
+    - "dependencies"
 
   - package-ecosystem: "composer"
     directory: "/"
